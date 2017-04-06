@@ -9,6 +9,16 @@ $cacheSettings = array(' memoryCacheSize ' => '8MB');
 PHPExcel_Settings::setCacheStorageMethod($cacheMethod, $cacheSettings);
 
 
+//列单元
+$b1 = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',);
+$b2 = array();
+for ($i = 0; $i < count($b1); $i++) {
+    for ($j = 0; $j < count($b1); $j++) {
+        $b2[] = $b1[$i] . $b1[$j];
+    }
+}
+$b = array_merge($b1, $b2);
+
 //将表转换成数组
 $headarr = array();
 $bodyarr = array();
@@ -45,18 +55,12 @@ foreach ($objPHPExcelReader->getWorksheetIterator() as $sheet)  //循环读取sh
 
 <!--读取的excel写入数据库-->
 <?php
-$headstr=implode(',',$headarr[0]);
-echo $headstr;
-foreach ($bodyarr as $row){
-    echo "<div>";
-    echo $bodystr=implode(',',$row);
-    echo "</div>";
-}
+$headstr=implode('/',$headarr[0]);
 $host = 'localhost';
 $username = 'root';
 $password = 'root';
 $con = mysql_connect($host, $username, $password);
-mysql_select_db('ak');
+mysql_select_db('oa');
 $sql = 'set names utf8';
 mysql_query($sql);
 mysql_close($con);
@@ -82,19 +86,22 @@ mysql_close($con);
     foreach ($headarr as $row) {
         echo '<tr>';
         for ($i = 0; $i < count($row); $i++) {
-            echo "<td style='background-color: #cccccc'>$row[$i]</td>";
+            echo "<td style='background-color: #cccccc'>$b[$i]1 $row[$i]</td>";
         }
         echo '</tr>';
     }
     ?>
+
     <!--内容单元-->
     <?php
+    $j=2;
     foreach ($bodyarr as $row) {
         echo '<tr>';
         for ($i = 0; $i < count($row); $i++) {
-            echo "<td>$row[$i]</td>";
+            echo "<td>$b[$i]$j $row[$i]</td>";
         }
         echo '</tr>';
+        $j+=1;
     }
     ?>
 </table>
