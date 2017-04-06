@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4eecc83e-e60f-484c-8259-013918b9e24a" name="默认" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.php" afterPath="$PROJECT_DIR$/input.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insert.php" afterPath="$PROJECT_DIR$/insert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insert2.php" afterPath="$PROJECT_DIR$/insert2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
     </list>
     <ignored path="oa.iws" />
@@ -26,73 +23,7 @@
     <favorites_list name="oa" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="input.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="19" column="27" selection-start-line="10" selection-start-column="0" selection-end-line="19" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="insert2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/insert2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1419">
-              <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
-              <folding>
-                <marker date="1491492848456" expanded="true" signature="1428:1470" ph="insert into work... " />
-                <marker date="1491492848456" expanded="true" signature="1428:1481" ph="insert into work... " />
-                <marker date="1491492848456" expanded="true" signature="1624:1643" ph="..." />
-                <marker date="1491492848456" expanded="true" signature="1973:2002" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1404">
-              <caret line="67" column="2" selection-start-line="67" selection-start-column="2" selection-end-line="67" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="insert.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/insert.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1385">
-              <caret line="83" column="6" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updateexcel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/updateexcel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="output.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -119,6 +50,7 @@
         <option value="$PROJECT_DIR$/updateexcel.php" />
         <option value="$PROJECT_DIR$/insert.php" />
         <option value="$PROJECT_DIR$/insert2.php" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test.php" />
       </list>
     </option>
@@ -269,15 +201,15 @@
       <workItem from="1491370731520" duration="21027000" />
       <workItem from="1491444092145" duration="13904000" />
       <workItem from="1491465383526" duration="3051000" />
-      <workItem from="1491472727550" duration="12346000" />
+      <workItem from="1491472727550" duration="16088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50328000" />
+    <option name="totallyTimeSpent" value="54070000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="94" y="18" width="1762" height="995" extended-state="0" />
+    <frame x="94" y="18" width="1762" height="995" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16800459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -507,6 +439,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/updateexcel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="688">
@@ -517,32 +460,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/insert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1385">
+        <state relative-caret-position="974">
           <caret line="83" column="6" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="19" column="27" selection-start-line="10" selection-start-column="0" selection-end-line="19" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/insert2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1419">
-          <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
+        <state relative-caret-position="1720">
+          <caret line="103" column="29" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
           <folding>
             <marker date="1491492848456" expanded="true" signature="1428:1470" ph="insert into work... " />
             <marker date="1491492848456" expanded="true" signature="1428:1481" ph="insert into work... " />
@@ -552,10 +479,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/output.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-359">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="10" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="131" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="67" column="2" selection-start-line="67" selection-start-column="2" selection-end-line="67" selection-end-column="2" />
+        <state relative-caret-position="587">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>

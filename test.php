@@ -1,14 +1,15 @@
 <?php
-header("content-type:text/html; charset=utf-8");
-if (isset($_POST)) {
-    $result=$_POST['data'];
-}else{
-    exit();
-}
+$result=$_POST['data'];
 
 require_once('Classes/PHPExcel.php');
 require_once('Classes/PHPExcel/Writer/Excel2007.php');
 require_once('Classes/PHPExcel/IOFactory.php');
+
+//设置缓存
+$cacheMethod = PHPExcel_CachedObjectStorageFactory:: cache_to_phpTemp;
+$cacheSettings = array(' memoryCacheSize ' => '8MB');
+PHPExcel_Settings::setCacheStorageMethod($cacheMethod, $cacheSettings);
+
 
 //列单元
 $b1 = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
@@ -21,12 +22,6 @@ for ($i = 0; $i < count($b1); $i++) {
 $b = array_merge($b1, $b2);
 
 
-//设置缓存
-$cacheMethod = PHPExcel_CachedObjectStorageFactory:: cache_to_phpTemp;
-$cacheSettings = array(' memoryCacheSize ' => '8MB');
-PHPExcel_Settings::setCacheStorageMethod($cacheMethod, $cacheSettings);
-
-
 $objPHPExcel = new PHPExcel();
 //标题
 $objPHPExcel->getProperties()->setTitle("php合并excel");
@@ -35,16 +30,11 @@ $objPHPExcel->getProperties()->setTitle("php合并excel");
 //获取列数
 $column_number=count($result[0]);
 
-
-//设置列字段名
-for($i=0;$i<$column_number;$i++){
-    $objPHPExcel->getActiveSheet()->setCellValue($b[$i].'1', $result[0][$i]);
-}
-
-$i = 1;
+$i = 0;
 foreach ($result as $row) {
     for($j=0;$j<$column_number;$j++){
-        $objPHPExcel->getActiveSheet()->setCellValue("$b[$j]$i", $result[$i][$j]);
+        $k=$i+1;
+        $objPHPExcel->getActiveSheet()->setCellValue("$b[$j]$k", $result[$i][$j]);
     }
     $i += 1;
 }
@@ -64,5 +54,7 @@ header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modifie
 header('Cache-Control: cache, must-revalidate'); // HTTP/1.1
 header('Pragma: public'); // HTTP/1.0
 $objWriter = new PHPExcel_Writer_Excel5($objPHPExcel);
-$objWriter->save('php://output');
+$filepath='./tmp/demo.xls';
+$objWriter->save($filepath);
+echo $filepath;
 ?>
