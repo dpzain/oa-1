@@ -39,12 +39,11 @@ foreach ($objPHPExcelReader->getWorksheetIterator() as $sheet)  //循环读取sh
         $i += 1;
     }
 }
+$excel = json_encode($excel);
 ?>
 
 <!--读取的excel写入数据库-->
 <?php
-
-var_dump($excel);
 $host = 'localhost';
 $username = 'root';
 $password = 'root';
@@ -52,6 +51,12 @@ $con = mysql_connect($host, $username, $password);
 mysql_select_db('oa');
 $sql = 'set names utf8';
 mysql_query($sql);
+$sql = "insert into work (content,tableid) values($excel,'1')";
+/*if (mysql_query($sql)) {
+    echo 'success';
+} else {
+    echo 'error';
+}*/
 mysql_close($con);
 ?>
 
@@ -61,51 +66,44 @@ mysql_close($con);
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        td {
-            border: 1px solid #666666;
-            cursor: crosshair;
-        }
-    </style>
+    <script src="handsontable/dist/handsontable.full.js"></script>
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="public/handsontable/handsontable.full.js"></script>
+    <link rel="stylesheet" media="screen" href="public/handsontable/handsontable.full.css">
 </head>
 <body>
-<table>
-    <!--在网页中显示excel-->
-    <?php
-    $j=1;
-    foreach ($excel as $row) {
-        echo '<tr>';
-        for ($i = 0; $i < count($row); $i++) {
-            echo "<td data-lt=$b[$i]/$j>$b[$i]/$j $row[$i]</td>";
-        }
-        echo '</tr>';
-        $j+=1;
-    }
-    ?>
-</table>
-<script src="./public/js/jquery.min.js"></script>
+<button>下载</button>
+<div id="example"></div>
 <script>
-    $(function () {
-        $('td').click(function () {
-            //获取当前td坐标;
-            var lt=$(this).data('lt');
-            $(this).attr('contenteditable', 'true');
-            $(this).blur(function () {
-                var text = $(this).text();
-                $(this).attr('contenteditable', 'false');
-                /*$.ajax({
-                    type:'GET',
-                    url:'updateexcel.php',
-                    data:{
-                        lt:lt,
-                        text:text
-                    }
-                    ,
-                    success:function (msg) {
-                        alert(msg);
-                    }
-                })*/
-            })
+    function sendData() {
+        return <?php echo $excel ?>;
+    }
+    var container = document.getElementById('example');
+    var ht = new Handsontable(container, {
+        data: sendData(),
+        rowHeaders: true,
+        colHeaders: true,
+        startRows: 5,
+        startCols: 5,
+        minRows: 30,
+        minCols: 30,
+        rowHeaders: true,
+        colHeaders: true,
+        minSpareRows: 1,
+        contextMenu: true,
+        colWidths: 150
+    });
+    $('button').click(function () {
+        var data = ht.getData();
+        $.ajax({
+            type:'POST',
+            url:'test.php',
+            data:{
+                data:data,
+            },
+            success:function (msg) {
+                alert(msg);
+            }
         })
     })
 </script>
