@@ -3,6 +3,11 @@ require_once('Classes/PHPExcel.php');
 require_once('Classes/PHPExcel/Writer/Excel2007.php');
 require_once('Classes/PHPExcel/IOFactory.php');
 
+/** Error reporting */
+error_reporting(E_ALL);
+ini_set('display_errors', FALSE);
+
+
 //设置缓存
 $cacheMethod = PHPExcel_CachedObjectStorageFactory:: cache_to_phpTemp;
 $cacheSettings = array(' memoryCacheSize ' => '8MB');
@@ -21,7 +26,7 @@ $b = array_merge($b1, $b2);
 
 //将表转换成数组
 $excel = array();
-$filename = './uploads/b.xls';
+$filename = './tmp/demo.xls';
 $objPHPExcelReader = PHPExcel_IOFactory::load($filename);  //加载excel文件
 
 foreach ($objPHPExcelReader->getWorksheetIterator() as $sheet)  //循环读取sheet
@@ -72,7 +77,7 @@ mysql_close($con);
     <link rel="stylesheet" media="screen" href="public/handsontable/handsontable.full.css">
 </head>
 <body>
-<button>下载</button>
+<button>保存</button>
 <div id="example"></div>
 <script>
     function sendData() {
@@ -86,7 +91,7 @@ mysql_close($con);
         startRows: 5,
         startCols: 5,
         minRows: 30,
-        minCols: 30,
+        minCols: 20,
         rowHeaders: true,
         colHeaders: true,
         minSpareRows: 1,
