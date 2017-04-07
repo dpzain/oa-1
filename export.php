@@ -1,5 +1,21 @@
 <?php
-$result=$_POST['data'];
+$id=$_POST['id'];
+$host = 'localhost';
+$username = 'root';
+$password = 'root';
+$con = mysql_connect($host, $username, $password);
+mysql_select_db('oa');
+$sql = 'set names utf8';
+mysql_query($sql);
+$sql = "select * from work where id='$id'";
+$query = mysql_query($sql);
+$row = mysql_fetch_array($query);
+if ($row) {
+    $result =unserialize($row['content']);
+}else{
+    exit();
+}
+mysql_close($con);
 
 require_once('Classes/PHPExcel.php');
 require_once('Classes/PHPExcel/Writer/Excel2007.php');
@@ -54,7 +70,5 @@ header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modifie
 header('Cache-Control: cache, must-revalidate'); // HTTP/1.1
 header('Pragma: public'); // HTTP/1.0
 $objWriter = new PHPExcel_Writer_Excel5($objPHPExcel);
-$filepath='./tmp/demo.xls';
-$objWriter->save($filepath);
-echo $filepath;
+$objWriter->save('php://output');
 ?>
