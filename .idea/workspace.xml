@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4eecc83e-e60f-484c-8259-013918b9e24a" name="默认" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/demo.xls" afterPath="$PROJECT_DIR$/tmp/demo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insert2.php" afterPath="$PROJECT_DIR$/insert2.php" />
-    </list>
+    <list default="true" id="4eecc83e-e60f-484c-8259-013918b9e24a" name="默认" comment="" />
     <ignored path="oa.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -218,12 +214,12 @@
       <workItem from="1491370731520" duration="21027000" />
       <workItem from="1491444092145" duration="13904000" />
       <workItem from="1491465383526" duration="3051000" />
-      <workItem from="1491472727550" duration="16889000" />
+      <workItem from="1491472727550" duration="16989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54871000" />
+    <option name="totallyTimeSpent" value="54971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="139" y="17" width="1762" height="995" extended-state="0" />
