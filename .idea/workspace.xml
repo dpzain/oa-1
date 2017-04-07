@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4eecc83e-e60f-484c-8259-013918b9e24a" name="默认" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/showexcel.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/insert3.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/demo.xls" afterPath="$PROJECT_DIR$/tmp/demo.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/export.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showexcel.php" afterPath="$PROJECT_DIR$/showexcel.php" />
     </list>
     <ignored path="oa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,96 +24,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="insert2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/insert2.php">
+      <file leaf-file-name="updateexcel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/updateexcel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3741">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <marker date="1491497525652" expanded="true" signature="1510:1552" ph="insert into work... " />
-                <marker date="1491497525652" expanded="true" signature="1510:1563" ph="insert into work... " />
-                <marker date="1491497525652" expanded="true" signature="1706:1725" ph="..." />
-                <marker date="1491497525652" expanded="true" signature="2055:2084" ph="..." />
-              </folding>
+            <state relative-caret-position="372">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showexcel.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="showexcel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/showexcel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="992">
-              <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+            <state relative-caret-position="46">
+              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1491539729369" expanded="true" signature="193:224" ph="select * fro... work" />
-                <marker date="1491539729369" expanded="true" signature="425:444" ph="..." />
-                <marker date="1491539729369" expanded="true" signature="425:767" ph="..." />
-                <marker date="1491539729369" expanded="true" signature="774:1011" ph="..." />
-                <marker date="1491539729369" expanded="true" signature="1036:1154" ph="..." />
-                <marker date="1491539729369" expanded="true" signature="1036:1818" ph="..." />
-                <marker date="1491539729369" expanded="true" signature="1062:1110" ph="{...}" />
-                <marker date="1491539729369" expanded="true" signature="1208:1506" ph="{...}" />
-                <marker date="1491539729369" expanded="true" signature="1542:1808" ph="{...}" />
-                <marker date="1491539729369" expanded="true" signature="1592:1801" ph="{&quot;type&quot;: 'POST'...}" />
-                <marker date="1491539729369" expanded="true" signature="1667:1710" ph="{&quot;data&quot;: data...}" />
-                <marker date="1491539729369" expanded="true" signature="1748:1791" ph="{...}" />
+                <marker date="1491553974689" expanded="true" signature="193:224" ph="select * fro... work" />
+                <marker date="1491553974689" expanded="true" signature="770:1506" ph="..." />
+                <marker date="1491553974689" expanded="true" signature="777:796" ph="..." />
+                <marker date="1491553974689" expanded="true" signature="777:1119" ph="..." />
+                <marker date="1491553974689" expanded="true" signature="1126:1363" ph="..." />
+                <marker date="1491553974689" expanded="true" signature="1126:1506" ph="..." />
+                <marker date="1491553974689" expanded="true" signature="1160:1354" ph="..." />
+                <marker date="1491553974689" expanded="true" signature="1239:1347" ph="..." />
+                <marker date="1491553974689" expanded="true" signature="1388:1506" ph="..." />
+                <marker date="1491553974689" expanded="true" signature="1414:1462" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="export.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/export.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1576">
-              <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
-              <folding>
-                <marker date="1491539624970" expanded="true" signature="211:244" ph="select * fro... work" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="output.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1422">
-              <caret line="58" column="2" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/input.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4702">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="save.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/save.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-              <folding>
-                <marker date="1491537932347" expanded="true" signature="246:279" ph="update work " />
-                <marker date="1491537932347" expanded="true" signature="246:292" ph="update work " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="download.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/download.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-298">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -167,7 +100,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="108" />
-    <option name="y" value="11" />
+    <option name="y" value="14" />
     <option name="width" value="1762" />
     <option name="height" value="995" />
   </component>
@@ -305,18 +238,18 @@
       <workItem from="1491444092145" duration="13904000" />
       <workItem from="1491465383526" duration="3051000" />
       <workItem from="1491472727550" duration="16989000" />
-      <workItem from="1491535800371" duration="4066000" />
+      <workItem from="1491535800371" duration="7665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59037000" />
+    <option name="totallyTimeSpent" value="62636000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="108" y="11" width="1762" height="995" extended-state="1" />
-    <editor active="false" />
+    <frame x="108" y="14" width="1762" height="995" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16800459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16800459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -536,14 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/updateexcel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/insert.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="974">
@@ -557,39 +482,6 @@
         <state relative-caret-position="-298">
           <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/save.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <marker date="1491537932347" expanded="true" signature="246:279" ph="update work " />
-            <marker date="1491537932347" expanded="true" signature="246:292" ph="update work " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/showexcel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1491539729369" expanded="true" signature="193:224" ph="select * fro... work" />
-            <marker date="1491539729369" expanded="true" signature="425:444" ph="..." />
-            <marker date="1491539729369" expanded="true" signature="425:767" ph="..." />
-            <marker date="1491539729369" expanded="true" signature="774:1011" ph="..." />
-            <marker date="1491539729369" expanded="true" signature="1036:1154" ph="..." />
-            <marker date="1491539729369" expanded="true" signature="1036:1818" ph="..." />
-            <marker date="1491539729369" expanded="true" signature="1062:1110" ph="{...}" />
-            <marker date="1491539729369" expanded="true" signature="1208:1506" ph="{...}" />
-            <marker date="1491539729369" expanded="true" signature="1542:1808" ph="{...}" />
-            <marker date="1491539729369" expanded="true" signature="1592:1801" ph="{&quot;type&quot;: 'POST'...}" />
-            <marker date="1491539729369" expanded="true" signature="1667:1710" ph="{&quot;data&quot;: data...}" />
-            <marker date="1491539729369" expanded="true" signature="1748:1791" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,9 +518,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/input.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4702">
+        <state relative-caret-position="430">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/save.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <marker date="1491537932347" expanded="true" signature="246:279" ph="update work " />
+            <marker date="1491537932347" expanded="true" signature="246:292" ph="update work " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/updateexcel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/showexcel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <folding>
+            <marker date="1491553974689" expanded="true" signature="193:224" ph="select * fro... work" />
+            <marker date="1491553974689" expanded="true" signature="770:1506" ph="..." />
+            <marker date="1491553974689" expanded="true" signature="777:796" ph="..." />
+            <marker date="1491553974689" expanded="true" signature="777:1119" ph="..." />
+            <marker date="1491553974689" expanded="true" signature="1126:1363" ph="..." />
+            <marker date="1491553974689" expanded="true" signature="1126:1506" ph="..." />
+            <marker date="1491553974689" expanded="true" signature="1160:1354" ph="..." />
+            <marker date="1491553974689" expanded="true" signature="1239:1347" ph="..." />
+            <marker date="1491553974689" expanded="true" signature="1388:1506" ph="..." />
+            <marker date="1491553974689" expanded="true" signature="1414:1462" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

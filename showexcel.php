@@ -15,7 +15,24 @@ if ($row) {
 mysql_close($con);
 ?>
 
+<?php
+/*表格配置存入数组然后放入数据库中*/
+$config = array(
+    /*true设置字符串，否则获取的值为1*/
+    'rowHeaders' => 'true',
+    'colHeaders' => 'true',
+    'startRows' => 5,
+    'startCols' => 5,
+    'minRows' => 30,
+    'minCols' => 20,
+    'rowHeaders' => 'true',
+    'colHeaders' => 'true',
+    'minSpareRows' => 1,
+    'contextMenu' => 'true',
+    'colWidths' => 110
+);
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,19 +59,15 @@ mysql_close($con);
     var container = document.getElementById('example');
     var ht = new Handsontable(container, {
         data: sendData(),
-        rowHeaders: true,
-        colHeaders: true,
-        startRows: 5,
-        startCols: 5,
-        minRows: 30,
-        minCols: 20,
-        rowHeaders: true,
-        colHeaders: true,
-        minSpareRows: 1,
-        contextMenu: true,
-        colWidths: 150
+        //读取配置数组
+        <?php
+        foreach ($config as $key=>$value){
+            echo $key.':'.$value.',';
+        }
+        ?>
     });
     $('#save').click(function () {
+
         var data = ht.getData();
         $.ajax({
             type: 'POST',
