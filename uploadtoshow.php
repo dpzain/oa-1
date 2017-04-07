@@ -1,18 +1,45 @@
 <?php
-$host = 'localhost';
-$username = 'root';
-$password = 'root';
-$con = mysql_connect($host, $username, $password);
-mysql_select_db('oa');
-$sql = 'set names utf8';
-mysql_query($sql);
-$sql = "select * from work where id='5'";
-$query = mysql_query($sql);
-$row = mysql_fetch_array($query);
-if ($row) {
-    $exceldata = json_encode(unserialize($row['content']));
+require_once('Classes/PHPExcel.php');
+require_once('Classes/PHPExcel/Writer/Excel2007.php');
+require_once('Classes/PHPExcel/IOFactory.php');
+
+//设置缓存
+$cacheMethod = PHPExcel_CachedObjectStorageFactory:: cache_to_phpTemp;
+$cacheSettings = array(' memoryCacheSize ' => '20MB');
+PHPExcel_Settings::setCacheStorageMethod($cacheMethod, $cacheSettings);
+
+
+//列单元
+$b1 = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+$b2 = array();
+for ($i = 0; $i < count($b1); $i++) {
+    for ($j = 0; $j < count($b1); $j++) {
+        $b2[] = $b1[$i] . $b1[$j];
+    }
 }
-mysql_close($con);
+$b = array_merge($b1, $b2);
+
+//将表转换成数组
+$excel = array();
+$filename = './uploads/cx.xls';
+$objPHPExcelReader = PHPExcel_IOFactory::load($filename);  //加载excel文件
+
+foreach ($objPHPExcelReader->getWorksheetIterator() as $sheet)  //循环读取sheet
+{
+    $i = 0;
+    foreach ($sheet->getRowIterator() as $row)  //逐行处理
+    {
+        $j = 0;
+        foreach ($row->getCellIterator() as $cell)  //逐列读取
+        {
+            $data = $cell->getValue(); //获取cell中数据
+            $excel[$i][$j] = $data;
+            $j += 1;
+        }
+        $i += 1;
+    }
+}
+$exceldata=json_encode($excel);
 ?>
 
 
@@ -28,7 +55,9 @@ $config = array(
     'colHeaders' => 'true',
     'minSpareRows' => 1,
     'contextMenu' => 'true',
-    'colWidths' => 110
+    'minRows' => 20,
+    'minCols' => 20,
+    'autoColumnSize'=>'true',
 );
 
 ?>
