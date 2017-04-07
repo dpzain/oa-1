@@ -42,6 +42,12 @@ $config = array(
     <script src="./public/js/jquery.min.js"></script>
     <script src="public/handsontable/handsontable.full.js"></script>
     <link rel="stylesheet" media="screen" href="public/handsontable/handsontable.full.css">
+    <style>
+        td{
+            color: red;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 <div style="margin-bottom: 50px">
