@@ -10,7 +10,7 @@ PHPExcel_Settings::setCacheStorageMethod($cacheMethod, $cacheSettings);
 
 
 //列单元
-$b1 = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',);
+$b1 = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
 $b2 = array();
 for ($i = 0; $i < count($b1); $i++) {
     for ($j = 0; $j < count($b1); $j++) {

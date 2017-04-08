@@ -3,6 +3,11 @@ require_once('Classes/PHPExcel.php');
 require_once('Classes/PHPExcel/Writer/Excel2007.php');
 require_once('Classes/PHPExcel/IOFactory.php');
 
+/** Error reporting */
+error_reporting(E_ALL);
+ini_set('display_errors', FALSE);
+
+
 //设置缓存
 $cacheMethod = PHPExcel_CachedObjectStorageFactory:: cache_to_phpTemp;
 $cacheSettings = array(' memoryCacheSize ' => '8MB');
@@ -21,7 +26,7 @@ $b = array_merge($b1, $b2);
 
 //将表转换成数组
 $excel = array();
-$filename = './uploads/b.xls';
+$filename = './tmp/demo.xls';
 $objPHPExcelReader = PHPExcel_IOFactory::load($filename);  //加载excel文件
 
 foreach ($objPHPExcelReader->getWorksheetIterator() as $sheet)  //循环读取sheet
@@ -39,12 +44,11 @@ foreach ($objPHPExcelReader->getWorksheetIterator() as $sheet)  //循环读取sh
         $i += 1;
     }
 }
+$excel = json_encode($excel);
 ?>
 
 <!--读取的excel写入数据库-->
 <?php
-
-var_dump($excel);
 $host = 'localhost';
 $username = 'root';
 $password = 'root';
@@ -52,6 +56,12 @@ $con = mysql_connect($host, $username, $password);
 mysql_select_db('oa');
 $sql = 'set names utf8';
 mysql_query($sql);
+$sql = "insert into work (content,tableid) values($excel,'1')";
+/*if (mysql_query($sql)) {
+    echo 'success';
+} else {
+    echo 'error';
+}*/
 mysql_close($con);
 ?>
 
@@ -61,51 +71,44 @@ mysql_close($con);
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        td {
-            border: 1px solid #666666;
-            cursor: crosshair;
-        }
-    </style>
+    <script src="handsontable/dist/handsontable.full.js"></script>
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="public/handsontable/handsontable.full.js"></script>
+    <link rel="stylesheet" media="screen" href="public/handsontable/handsontable.full.css">
 </head>
 <body>
-<table>
-    <!--在网页中显示excel-->
-    <?php
-    $j=1;
-    foreach ($excel as $row) {
-        echo '<tr>';
-        for ($i = 0; $i < count($row); $i++) {
-            echo "<td data-lt=$b[$i]/$j>$b[$i]/$j $row[$i]</td>";
-        }
-        echo '</tr>';
-        $j+=1;
-    }
-    ?>
-</table>
-<script src="./public/js/jquery.min.js"></script>
+<button>保存</button>
+<div id="example"></div>
 <script>
-    $(function () {
-        $('td').click(function () {
-            //获取当前td坐标;
-            var lt=$(this).data('lt');
-            $(this).attr('contenteditable', 'true');
-            $(this).blur(function () {
-                var text = $(this).text();
-                $(this).attr('contenteditable', 'false');
-                /*$.ajax({
-                    type:'GET',
-                    url:'updateexcel.php',
-                    data:{
-                        lt:lt,
-                        text:text
-                    }
-                    ,
-                    success:function (msg) {
-                        alert(msg);
-                    }
-                })*/
-            })
+    function sendData() {
+        return <?php echo $excel ?>;
+    }
+    var container = document.getElementById('example');
+    var ht = new Handsontable(container, {
+        data: sendData(),
+        rowHeaders: true,
+        colHeaders: true,
+        startRows: 5,
+        startCols: 5,
+        minRows: 30,
+        minCols: 20,
+        rowHeaders: true,
+        colHeaders: true,
+        minSpareRows: 1,
+        contextMenu: true,
+        colWidths: 150
+    });
+    $('button').click(function () {
+        var data = ht.getData();
+        $.ajax({
+            type:'POST',
+            url:'test.php',
+            data:{
+                data:data,
+            },
+            success:function (msg) {
+                alert(msg);
+            }
         })
     })
 </script>
